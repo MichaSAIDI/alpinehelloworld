@@ -109,7 +109,6 @@ pipeline {
         }
      }
   }
-}
 post {
        success {
          slackSend (color: '#00FF00', message: "rahmasaidi:*SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
@@ -118,3 +117,4 @@ post {
             slackSend (color: '#FF0000', message: "rahmaFAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
           }   
     }
+}
